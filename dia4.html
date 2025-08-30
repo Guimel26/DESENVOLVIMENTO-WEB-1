@@ -1,68 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Dia Ideal</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            margin: 40px;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8">
+  <title>Dia Ideal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset simples */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-        }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e1f5fe);
+      color: #2c3e50;
+      line-height: 1.6;
+      padding: 20px;
+    }
 
-        h2 {
-            color: #34495e;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-        }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-        p {
-            margin-bottom: 15px;
-        }
+    header h1 {
+      font-size: 2.5rem;
+      color: #00796b;
+    }
 
-        em {
-            color: #e74c3c;
-            font-style: italic;
-        }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-        strong {
-            color: #27ae60;
-        }
+    section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-        }
-    </style>
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      border-left: 5px solid #00796b;
+      padding-left: 10px;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      color: #004d40;
+    }
+
+    p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    strong {
+      color: #388e3c;
+    }
+
+    em {
+      color: #d32f2f;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Dia Ideal</h1>
+  <header>
+    <h1>Dia Ideal</h1>
+  </header>
 
-        <h2>Manhã</h2>
-        <p>Acordar cedo e tomar um bom <strong>café fresco</strong> para começar o dia ligado no 220.
-        Logo após, me arrumo e vou trabalhar.</p>
-        <p>Depois, costumo analisar meus <em>investimentos</em> no meio da manhã.</p>
+  <main class="container">
+    <section>
+      <h2>Manhã</h2>
+      <p>Acordar cedo e sentir o cheiro de um <strong>café fresco</strong> é uma das melhores formas de começar o dia.</p>
+      <p>Depois, costumo fazer uma caminhada leve para sentir a <em>energia da manhã</em>.</p>
+    </section>
 
-        <h2>Tarde</h2>
-        <p>Na parte da tarde, gosto de me dedicar aos meus estudos ou projetos pessoais. 
-        É o horário em que me sinto mais <strong>produtivo</strong>.</p>
-        <p>Também gosto de reservar um tempo para <em>descansar</em> um pouco o corpo.</p>
+    <section>
+      <h2>Tarde</h2>
+      <p>Na parte da tarde, gosto de me dedicar aos meus estudos ou projetos pessoais. É quando me sinto mais <strong>produtivo</strong>.</p>
+      <p>Também gosto de ler algo que traga <em>inspiração</em> para o resto do dia.</p>
+    </section>
 
-        <h2>Noite</h2>
-        <p>À noite, prefiro desacelerar do trabalho fazendo outras coisas. Ir à igreja ou academia e gosto de jantar com calma, aproveitando uma refeição 
-        simples, mas <strong>saborosa</strong>.</p>
-        <p>Para finalizar, gosto de assistir a um filme ou ouvir uma boa música, criando uma sensação de <em>tranquilidade</em> antes de dormir.</p>
-    </div>
+    <section>
+      <h2>Noite</h2>
+      <p>À noite, prefiro desacelerar. Gosto de jantar com calma, aproveitando uma refeição <strong>saborosa</strong>.</p>
+      <p>Depois assisto a um filme ou ouço música, criando uma sensação de <em>tranquilidade</em> antes de dormir.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Meu Dia Ideal</p>
+  </footer>
 </body>
 </html>
